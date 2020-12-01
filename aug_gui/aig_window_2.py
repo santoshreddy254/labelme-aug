@@ -9,6 +9,7 @@ from utils.arguments import *
 from utils.generate_artificial_images import perform_augmentation
 from utils.preprocessing import resize_images, rename_images_labels, rename_backgrounds
 from pathlib import Path
+import __main__
 # import aug_main
 
 
@@ -303,6 +304,9 @@ class MainWindow(QWidget):                           # <===
             # self.start_gui = main.MainWindow()
             # self.start_gui.show()
             self.hide()
+            sys.exit(0)
+            # sys.exit(app.exec_())
+            # __main__.main()
 
 
 if __name__ == "__main__":

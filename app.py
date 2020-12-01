@@ -2038,11 +2038,12 @@ class MainWindow(QtWidgets.QMainWindow):
             ):
                 item.setCheckState(Qt.Checked)
                 self.annotations_list_check_augment.append(label_file)
+                print(label_file,"-------------")
             else:
                 item.setCheckState(Qt.Unchecked)
             self.fileListWidget.addItem(item)
         self.openNextImg(load=load)
-        if len(self.annotations_list_check_augment)>1:
+        if len(self.annotations_list_check_augment)>0:
             self.actions.augment_.setEnabled(True)
 
     def scanAllImages(self, folderPath):
